@@ -12,8 +12,11 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
   box-shadow: inset -8px -74px 59px -76px rgba(0,0,0,1);
+
+  @media (max-width: 1100px){
+    padding: 80px 5% 0;
+  }
 
 `
 
@@ -22,6 +25,11 @@ export const Avatar = styled.img`
   height: 250px;
   border-radius: 50%;
   background-color: black;
+
+  @media (max-width: 1100px){
+    width: 200px;
+    height: 200px;
+  }
 `
 
 export const WrapperPresentation = styled.div`
@@ -33,7 +41,12 @@ export const WrapperPresentation = styled.div`
   gap: 16px;
 
   padding: 32px;
-  background-color: rgba(0,0,0, .8)
+  background-color: rgba(0,0,0, .8);
+
+  @media (max-width: 1100px){
+    flex-direction: column;
+    width: 100%;
+  }
 `
 
 export const Title = styled.h1`
@@ -53,4 +66,8 @@ export const Text = styled.p`
   letter-spacing: 1px;
 
   font-size: 18px;
+
+  @media (max-width: 1100px){
+    width: 100%;
+  }
 `
