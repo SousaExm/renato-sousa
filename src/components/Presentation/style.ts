@@ -44,7 +44,7 @@ export const WrapperPresentation = styled.div`
   @media (max-width: 780px){
     flex-direction: column;
     width: 100%;
-    margin: 16px 5%;
+    margin: 32px 5%;
   }
 `
 

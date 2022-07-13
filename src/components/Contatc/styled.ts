@@ -6,9 +6,8 @@ export const Wrapper =  styled.div`
   align-items: center;
   flex-direction: column;
 
-  padding: 0 15% 0;
+  padding: 32px 15%;
   gap: 30px;
-  height: 90vh;
   color: #fff;
   background-image: url("/bg.jpg");
   background-repeat: no-repeat;
@@ -16,6 +15,10 @@ export const Wrapper =  styled.div`
   background-attachment: fixed;
 
   box-shadow: inset -8px -74px 59px -76px rgba(0,0,0,1);
+
+  @media(max-width: 880px){
+    padding: 32px 5%;
+  }
 `
 
 export const TitleWrapper = styled.div`
@@ -24,6 +27,13 @@ export const TitleWrapper = styled.div`
     padding: 0 15%;
     text-align: center;
   }
+
+
+  @media(max-width: 760px ){
+    > p {
+      padding: 0 5%;
+    }
+  } 
 `
 
 
@@ -36,6 +46,10 @@ export const Title = styled.h2`
   width: fit-content;
   border-bottom: 2px solid red;
   text-transform: uppercase;
+
+  @media(max-width: 760px ){
+    font-size: 24px; 
+  } 
 
 `
 
@@ -71,6 +85,11 @@ export const FormWrapper = styled.form`
     background-color: red;
     }
   }
+
+  @media(max-width: 880px){
+    width: 100%;
+    padding: 32px 5%;
+  }
 `
 
 export const WrapperFormData = styled.div`
@@ -79,6 +98,11 @@ export const WrapperFormData = styled.div`
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
+
+  @media(max-width: 760px){
+    flex-direction: column;
+    width: 100%;
+  }
 `
 
 export const InputWrapper = styled.div`
@@ -100,7 +124,12 @@ export const InputWrapper = styled.div`
 
     width: 300px;
     color: black;
+
+    @media(max-width: 760px){
+      width: 100%;
+    }
   }
+
 `
 
 export const MensageWrapper = styled.div`
