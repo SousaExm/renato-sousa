@@ -15,6 +15,28 @@ export const ResetCSS = createGlobalStyle`
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  * 3. Remove gray overlay on links for iOS.
  */
+
+ * {
+ scrollbar-width: thin;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+ width: 12px;
+ position: relative;
+}
+
+*::-webkit-scrollbar-track {
+ background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+ background-color: black;
+ border-radius: 20px;
+ box-shadow: inset 0px 0px 5px 0px rgba(255,0,21,1);
+ border: 2px solid black;
+}
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */

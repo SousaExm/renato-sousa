@@ -14,13 +14,38 @@ export const Wrapper = styled.header`
   z-index: 9999;
   padding: 0 15%;
 
- 
+  @media (max-width: 1100px) {
+    
+    padding: 0 5%;
+    background-color: black;
+    
+    .open {
+      display: flex;
+    }
+
+    Overlay.open {
+      display: block;
+    }
+  }
 `
 
 export const NavWrapper = styled.nav`
   display: flex;
   height: 100%;
-  gap: 16px;
+  
+  @media (max-width: 680px){ 
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+  }
 `
 
 export const NavLink = styled.a`
@@ -34,11 +59,19 @@ export const NavLink = styled.a`
   border-color: #FC0E49;
 
   transition: .3s;
-
-  &:hover {
+  @media (min-width: 681px){
+    &:hover {
     border-bottom: 2px solid #FC0E49;
     box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
   }
+  }
+
+  @media (max-width: 680px){
+    width: 100%;
+    box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
+    border-bottom: 1px solid #FC0E49;
+  }
+
 `
 
 export const IconsWrapper = styled.div`
@@ -48,7 +81,6 @@ export const IconsWrapper = styled.div`
 
 export const WrapperLinkedin = styled.a`
   background-color: #2868B2;
-  z-index: 999;
   width: 32px; 
   height: 32px;
   padding: 4px;
@@ -101,5 +133,39 @@ export const WrapperWhats = styled.div`
     color: #fff;
     width: 24px;
     height: 24px;
+  }
+`
+
+export const OpenAndCloseMenu = styled.div`
+  display: none;
+  border-bottom: 3px solid red;
+  border-radius: 8px;
+  padding: 4px;
+
+  box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1),  0px 0px 15px -8px rgba(255,255,255,1);
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 680px){
+    display: block;
+  }
+  
+  ${StyledIconBase}{
+    color: #fff;
+    width: 24px;
+    height: 24px;
+  }
+`
+
+export const Overlay = styled.div`
+  display: none;
+  @media (max-width: 680px){
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
   }
 `
