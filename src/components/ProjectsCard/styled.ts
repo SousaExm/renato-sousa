@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   width: 240px;
   height: 340px;
   border-bottom: 1px solid red;
-  box-shadow: -15px -1px 145px 3px rgba(56,53,56,.3);
+  box-shadow: 0px 30px 50px 3px rgba(56,53,56,.3);
 
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   transition: .4s;
 
   &:hover {
-    box-shadow: -15px -1px 145px 3px rgba(255,0,0,.2);
+    box-shadow: 0px 30px 50px 3px rgba(255,0,0,.2);
   }
 `
 

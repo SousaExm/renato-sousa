@@ -3,8 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   background-color: black;
   color: white;
-
-  padding: 36px 0;
+  padding: 36px 10%;
   
   box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
 
@@ -14,18 +13,22 @@ export const Wrapper = styled.div`
   }
 
   .swiper-slide {
-    margin: 16px 0;
-    width: 100%;
+    margin: 16px 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .swiper-button-next{
     color: red;
-    padding-right: 10%;
   }
   
   .swiper-button-prev{
     color: red;
-    padding-left: 10%;
+  }
+
+  @media (max-width: 880px){
+    padding: 36px 5%;
   }
 `
 
@@ -53,8 +56,7 @@ export const Title = styled.h2`
 
 export const CardsWrapper = styled.div`
   padding: 32px 0;
-  margin: 0 15%;
   display: flex;
-  justify-content: space-between;
-  align-items: space-between;
+  justify-content: center;
+  align-items: center;
 `

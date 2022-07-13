@@ -4,9 +4,8 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 15% 0;
   gap: 30px;
-  height: 90vh;
+  height: fit-content;
   color: #fff;
   background-image: url("/bg.jpg");
   background-repeat: no-repeat;
@@ -14,10 +13,7 @@ export const Wrapper = styled.div`
   background-attachment: fixed;
   box-shadow: inset -8px -74px 59px -76px rgba(0,0,0,1);
 
-  @media (max-width: 1100px){
-    padding: 80px 5% 0;
-  }
-
+  padding-top: 80px;
 `
 
 export const Avatar = styled.img`
@@ -26,7 +22,7 @@ export const Avatar = styled.img`
   border-radius: 50%;
   background-color: black;
 
-  @media (max-width: 1100px){
+  @media (max-width: 840px){
     width: 200px;
     height: 200px;
   }
@@ -40,12 +36,15 @@ export const WrapperPresentation = styled.div`
   border-radius: 8px;
   gap: 16px;
 
+  margin: 80px 15%;
+
   padding: 32px;
   background-color: rgba(0,0,0, .8);
 
-  @media (max-width: 1100px){
+  @media (max-width: 780px){
     flex-direction: column;
     width: 100%;
+    margin: 16px 5%;
   }
 `
 
@@ -67,7 +66,7 @@ export const Text = styled.p`
 
   font-size: 18px;
 
-  @media (max-width: 1100px){
+  @media (max-width: 680px){
     width: 100%;
   }
 `

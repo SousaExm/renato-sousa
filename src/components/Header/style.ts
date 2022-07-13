@@ -4,7 +4,7 @@ import {StyledIconBase} from '@styled-icons/styled-icon'
 export const Wrapper = styled.header`
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@ export const Wrapper = styled.header`
   @media (max-width: 1100px) {
     
     padding: 0 5%;
-    background-color: black;
+    align-items: space-between;
     
     .open {
       display: flex;
@@ -77,6 +77,11 @@ export const NavLink = styled.a`
 export const IconsWrapper = styled.div`
   display: flex;
   gap: 8px;
+  margin-right: 12px;
+
+  @media ( max-width: 1100px){
+    margin-right: 0;
+  }
 `
 
 export const WrapperLinkedin = styled.a`
