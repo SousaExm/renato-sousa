@@ -8,7 +8,11 @@ import { Close } from "@styled-icons/ionicons-outline/Close"
 
 import { useState } from "react"
 
-export function Header(){
+interface HeaderPropsType {
+  local: "home" | "projects"
+}
+
+export function Header({local}:HeaderPropsType){
     
   const [ menuStatus , setMenuStatus ] = useState<string>("")  
   
@@ -22,24 +26,32 @@ export function Header(){
 
   return(
     <S.Wrapper>
-      <S.Overlay
-      className={menuStatus}
-      onClick={() => handleToogleMenu()}/>
-      <S.OpenAndCloseMenu
-      onClick={() => handleToogleMenu()}
-      >
-        <Menu/>
-      </S.OpenAndCloseMenu>
-      <S.NavWrapper className={menuStatus}>
-        <S.NavLink 
-        href="#home"
-        onClick={() => handleToogleMenu()}
-        >Home</S.NavLink>
-        <S.NavLink href="#skils">Skils</S.NavLink>
-        <S.NavLink href="#projects">Projetos</S.NavLink>
-        <S.NavLink href="#about">Sobre</S.NavLink>
-        <S.NavLink href="#contact">Contato</S.NavLink>
-      </S.NavWrapper>
+      
+      {local === "home"? (
+         <>
+          <S.Overlay
+          className={menuStatus}
+          onClick={() => handleToogleMenu()}/>
+          <S.OpenAndCloseMenu
+          onClick={() => handleToogleMenu()}
+          >
+            <Menu/>
+          </S.OpenAndCloseMenu>
+          <S.NavWrapper className={menuStatus}>
+            <S.NavLink 
+            href="#home"
+            onClick={() => handleToogleMenu()}
+            >Home</S.NavLink>
+            <S.NavLink href="#skils">Skils</S.NavLink>
+            <S.NavLink href="#projects">Projetos</S.NavLink>
+            <S.NavLink href="#about">Sobre</S.NavLink>
+            <S.NavLink href="#contact">Contato</S.NavLink>
+          </S.NavWrapper>
+         </>
+      ) : (
+        <S.NavLink className="for-page-projects">Voltar</S.NavLink>
+      )}
+    
       <S.IconsWrapper>
         <S.WrapperLinkedin>
           <Linkedin/>

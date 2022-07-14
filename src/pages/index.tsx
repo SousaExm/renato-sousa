@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import { Header } from '../components/Header'
-import { ResetCSS } from '../../global/ResetCSS'
 import { Presentation } from '../components/Presentation'
 import { SkilsList } from '../components/SkilsList'
 import { ProjectsList } from '../components/ProjectList'
@@ -12,8 +11,7 @@ import { CertificatesList } from '../components/CertificatesList'
 const Home: NextPage = () => {
   return (
     <>
-    <ResetCSS/>
-    <Header/>
+    <Header local="home"/>
     <Presentation/>
     <SkilsList/>
     <CertificatesList/>

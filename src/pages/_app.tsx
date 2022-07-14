@@ -1,8 +1,12 @@
 import type { AppProps } from 'next/app'
+import { ResetCSS } from '../../global/ResetCSS'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return(
-    <Component {...pageProps} />
+    <>
+      <ResetCSS/>
+      <Component {...pageProps} />
+    </>
     
   ) 
 }

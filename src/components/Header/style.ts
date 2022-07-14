@@ -26,6 +26,14 @@ export const Wrapper = styled.header`
       display: block;
     }
   }
+  
+  .for-page-projects{
+    width: fit-content;
+    padding: 0 8px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
 `
 
 export const NavWrapper = styled.nav`
@@ -60,19 +68,24 @@ export const NavLink = styled.a`
   border-color: #FC0E49;
 
   transition: .1s;
-  @media (min-width: 760px){
-    &:hover {
+
+  &:hover {
     border-bottom: 2px solid #FC0E49;
     box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
   }
-  }
+
 
   @media (max-width: 760px){
+
     width: 100%;
     box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
     border-bottom: 1px solid #FC0E49;
-  }
 
+    &:hover {
+    border-bottom: 2px solid #FC0E49;
+    box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
+    }
+  }
 `
 
 export const IconsWrapper = styled.div`

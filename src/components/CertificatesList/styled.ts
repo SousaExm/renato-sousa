@@ -38,7 +38,6 @@ export const Wrapper = styled.div`
     background-color: red;
     border: 1px solid white;
   }
-
 `
 
 export const Title = styled.h2`
@@ -87,7 +86,6 @@ export const ImageWrapper = styled.img`
 
   box-shadow: 0px 20px 30px 3px rgba(0,0,0,.3);
 
-
   @media (max-width: 500px){
     height: 220px;
   }
@@ -95,5 +93,4 @@ export const ImageWrapper = styled.img`
   @media (max-width: 380px){
     height: 200px;
   }
-
 `
