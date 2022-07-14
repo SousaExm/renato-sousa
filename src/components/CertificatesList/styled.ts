@@ -1,31 +1,33 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  padding: 60px 15%;
-  text-align: center;
-
+  gap: 30px;
+  height: fit-content;
+  color: #fff;
   background-color: black;
 
   box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,.5), inset 0px -15px 23px -20px rgba(255,0,13,.5);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
   .swiper {
-    padding: 32px;
-    width: 600px;
+    width: 100%;
+    height: 100%;
   }
 
   .swiper-slide {
+    margin: 16px 0 72px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 16px;
-    flex-direction: column;
-    gap: 8px;
+    
   }
 
+ 
   .swiper-pagination-bullet {
     background-color: white;
     width: 8px;
@@ -37,19 +39,12 @@ export const Wrapper = styled.div`
     border: 1px solid white;
   }
 
-  @media (max-width: 880px){
-    
-    padding: 60px 5%;
-    .swiper {
-      width: 100%;
-    }
-  }
 `
 
 export const Title = styled.h2`
   font-weight: bold;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, .5 );
+  background-color: rgba(0, 0, 0, 1 );
   color: #FFF;
 
   margin-bottom: 36px;
@@ -63,9 +58,42 @@ export const Title = styled.h2`
   border-radius: 8px;;
 `
 
-export const IconTitle = styled.h3`
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
+export const WrapperData = styled.div`
+  width:100%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  
+  background-color: rgba(0,0,0,.85);
+
+  padding: 60px 0;
+
+  flex-direction: column;
 `
 
+export const ImageWrapper = styled.img`
+  border-radius: 8px;
+  box-shadow: 0px 20px 30px 3px rgba(56,53,56,.2);
+  width: 438px;
+  height: 309px;
+
+  margin: 0 16px;
+
+  transition: .4s;
+  border-radius: 8px;
+
+  box-shadow: 0px 20px 30px 3px rgba(0,0,0,.3);
+
+
+  @media (max-width: 500px){
+    height: 220px;
+  }
+
+  @media (max-width: 380px){
+    height: 200px;
+  }
+
+`

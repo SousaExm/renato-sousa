@@ -28,7 +28,7 @@ export function ProjectsList(){
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper id="projects">
       <S.Title>
         Projetos
       </S.Title>

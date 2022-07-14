@@ -13,7 +13,7 @@ export function Header(){
   const [ menuStatus , setMenuStatus ] = useState<string>("")  
   
   function handleToogleMenu() {
-    if(menuStatus === ""){
+    if(menuStatus === "" && document.body.clientWidth < 760){
       setMenuStatus("open")
     }else(
       setMenuStatus("")
@@ -22,7 +22,7 @@ export function Header(){
 
   return(
     <S.Wrapper>
-      <S.Overlay 
+      <S.Overlay
       className={menuStatus}
       onClick={() => handleToogleMenu()}/>
       <S.OpenAndCloseMenu
@@ -31,9 +31,14 @@ export function Header(){
         <Menu/>
       </S.OpenAndCloseMenu>
       <S.NavWrapper className={menuStatus}>
-        <S.NavLink href="#">Home</S.NavLink>
-        <S.NavLink href="#">Skils</S.NavLink>
-        <S.NavLink href="#">Projects</S.NavLink>
+        <S.NavLink 
+        href="#home"
+        onClick={() => handleToogleMenu()}
+        >Home</S.NavLink>
+        <S.NavLink href="#skils">Skils</S.NavLink>
+        <S.NavLink href="#projects">Projetos</S.NavLink>
+        <S.NavLink href="#about">Sobre</S.NavLink>
+        <S.NavLink href="#contact">Contato</S.NavLink>
       </S.NavWrapper>
       <S.IconsWrapper>
         <S.WrapperLinkedin>

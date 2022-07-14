@@ -15,7 +15,6 @@ export const Wrapper = styled.header`
   padding: 0 15%;
 
   @media (max-width: 1100px) {
-    
     padding: 0 5%;
     align-items: space-between;
     
@@ -33,7 +32,7 @@ export const NavWrapper = styled.nav`
   display: flex;
   height: 100%;
   
-  @media (max-width: 680px){ 
+  @media (max-width: 760px){ 
 
     display: none;
     flex-direction: column;
@@ -44,7 +43,9 @@ export const NavWrapper = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
-    width: 260px;
+
+    max-width: 300px;
+    width: 70%;
   }
 `
 
@@ -53,20 +54,20 @@ export const NavLink = styled.a`
   font-weight: bold;
   text-transform: uppercase;
   line-height: 80px;
-  width: 100px;
+  min-width: 100px;
 
   text-align: center;
   border-color: #FC0E49;
 
-  transition: .3s;
-  @media (min-width: 681px){
+  transition: .1s;
+  @media (min-width: 760px){
     &:hover {
     border-bottom: 2px solid #FC0E49;
     box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
   }
   }
 
-  @media (max-width: 680px){
+  @media (max-width: 760px){
     width: 100%;
     box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
     border-bottom: 1px solid #FC0E49;
@@ -152,7 +153,7 @@ export const OpenAndCloseMenu = styled.div`
   &:hover {
     cursor: pointer;
   }
-  @media (max-width: 680px){
+  @media (max-width: 760px){
     display: block;
   }
   
@@ -165,7 +166,7 @@ export const OpenAndCloseMenu = styled.div`
 
 export const Overlay = styled.div`
   display: none;
-  @media (max-width: 680px){
+  @media (max-width: 760px){
     position: fixed;
     background-color: rgba(0,0,0,.5);
     top: 0;

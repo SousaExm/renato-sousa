@@ -3,7 +3,7 @@ import * as S from './styled'
 
 export function Contatc (){
   return (
-    <S.Wrapper>
+    <S.Wrapper id="contact">
       <S.FormWrapper>
         <S.TitleWrapper>
           <S.Title>Entre em contato</S.Title>

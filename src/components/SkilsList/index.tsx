@@ -36,7 +36,7 @@ export function SkilsList () {
 
 
   return (
-    <S.Wrapper>
+    <S.Wrapper id="skils">
       <S.Title>Habilidades</S.Title>
       <Slider
       setings={setings}

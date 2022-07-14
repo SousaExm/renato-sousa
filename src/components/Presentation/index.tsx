@@ -3,7 +3,7 @@ import * as S from './style'
 
 export function Presentation() {
   return(
-    <S.Wrapper>
+    <S.Wrapper id="home">
       <S.WrapperPresentation>
         <S.Avatar src="https://avatars.githubusercontent.com/u/94645489?v=4" />
         <div>

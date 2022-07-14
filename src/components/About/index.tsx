@@ -2,7 +2,7 @@ import * as S from './styled'
 
 export function About (){
   return (
-    <S.Wrapper>
+    <S.Wrapper id="about">
       <S.Title>Um pouco mais sobre mim</S.Title>
       <S.Video>
         Em breve

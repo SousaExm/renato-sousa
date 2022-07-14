@@ -7,6 +7,7 @@ import { ProjectsList } from '../components/ProjectList'
 import { About } from '../components/About'
 import { Contatc } from '../components/Contatc'
 import { Footer } from '../components/Footer'
+import { CertificatesList } from '../components/CertificatesList'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
     <Header/>
     <Presentation/>
     <SkilsList/>
+    <CertificatesList/>
     <ProjectsList/>
     <About/>
     <Contatc/>

@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
   color: white;
   padding: 36px 10%;
   
-  box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,1);
+  box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,.5), inset 0px -15px 23px -20px rgba(255,0,13,.5);
+
 
   .swiper {
     width: 100%;
