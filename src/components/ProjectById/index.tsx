@@ -19,8 +19,8 @@ export function ProjectById(){
       <S.TecnologiesWrapper>
         <h3>Tecnologias</h3>
         <div>
-          {usedSkils.map(skil => (
-            <S.Tecnologie>
+          {usedSkils.map((skil, index) => (
+            <S.Tecnologie key={skil+index}>
               {SkilIcons[skil]}
               <h4>{skil}</h4>
             </S.Tecnologie>
