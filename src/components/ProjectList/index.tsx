@@ -8,9 +8,19 @@ import * as S from './styled'
 import 'swiper/css';
 import 'swiper/css/bundle'
 
+interface ProjectListProps {
+  projects: {
+    description: string;
+    slug: string;
+    title:string;
+    walpapper: {
+      url: string
+    }
+  }[];
+}
 
-export function ProjectsList(){
-
+export function ProjectsList({projects}:ProjectListProps){
+  
   const [ windowWidth, setWindowWidth ] = useState(0)
   useEffect(() => {
     if( windowWidth === 0){
@@ -22,7 +32,7 @@ export function ProjectsList(){
   })
 
   const setings:SwiperProps = {
-    slidesPerView: windowWidth > 1200 ? 3 : windowWidth > 880 ? 2 : 1 ,
+    slidesPerView: windowWidth > 1200 && projects?.length > 2 ? 3 : windowWidth > 880 && projects?.length >= 2 ? 2 : 1 ,
     speed: 1000,
     navigation: true,
   }
@@ -34,39 +44,16 @@ export function ProjectsList(){
       </S.Title>
       <Swiper {...setings} modules={[Navigation]}>
         <SwiperSlide>
-          <S.CardsWrapper>
-            <ProjectsCard/>  
-          </S.CardsWrapper>
-        </SwiperSlide>                     
-        <SwiperSlide>
-          <S.CardsWrapper>
-            <ProjectsCard/>  
-          </S.CardsWrapper>
-        </SwiperSlide>                     
-        <SwiperSlide>
-          <S.CardsWrapper>
-            <ProjectsCard/>  
-          </S.CardsWrapper>
-        </SwiperSlide>                     
-        <SwiperSlide>
-          <S.CardsWrapper>
-            <ProjectsCard/>  
-          </S.CardsWrapper>
-        </SwiperSlide>                     
-        <SwiperSlide>
-          <S.CardsWrapper>
-            <ProjectsCard/>  
-          </S.CardsWrapper>
-        </SwiperSlide>                     
-        <SwiperSlide>
-          <S.CardsWrapper>
-            <ProjectsCard/>  
-          </S.CardsWrapper>
-        </SwiperSlide>                     
-        <SwiperSlide>
-          <S.CardsWrapper>
-            <ProjectsCard/>  
-          </S.CardsWrapper>
+          {projects?.map(project => (
+            <S.CardsWrapper key={"project" + project.slug}>
+              <ProjectsCard
+                slug={project.slug}
+                imageUrl={project.walpapper.url}
+                title={project.title}
+                description={project.description}
+              />  
+            </S.CardsWrapper>
+          ))}
         </SwiperSlide>                     
                    
       </Swiper>

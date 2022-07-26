@@ -1,5 +1,4 @@
 import * as S from './styled'
-import Image from 'next/image'
 
 import { Swiper, SwiperSlide, SwiperProps} from "swiper/react"
 import { Pagination , Autoplay } from 'swiper'
@@ -7,7 +6,18 @@ import { Pagination , Autoplay } from 'swiper'
 import 'swiper/css';
 import 'swiper/css/bundle'
 
-export function CertificatesList (){
+interface CertificateProps {
+  certificates :{
+    finishedIn: string;
+    institution: string;
+    title: string;
+    certficateImage :{
+      url: string;
+    }
+  }[];
+}
+
+export function CertificatesList ({ certificates } : CertificateProps){
 
   const setings:SwiperProps = {
     slidesPerView: 1,
@@ -27,24 +37,17 @@ export function CertificatesList (){
           Certificados
         </S.Title>
         <Swiper {...setings} modules={[Autoplay, Pagination]}>
-          <SwiperSlide>
-            <S.ImageWrapper src='/certificado-1.png'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <S.ImageWrapper src='/certificado-1.png'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <S.ImageWrapper src='/certificado-1.png'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <S.ImageWrapper src='/certificado-1.png'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <S.ImageWrapper src='/certificado-1.png'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <S.ImageWrapper src='/certificado-1.png'/>
-          </SwiperSlide>
+          
+          {certificates?.map( certificate => (
+            <SwiperSlide key={certificate.certficateImage.url}>
+              <S.CertificateWrapper>
+                <S.ImageWrapper src={certificate.certficateImage.url}/>
+                <S.CertificateTitle>
+                  {certificate.title}
+                </S.CertificateTitle>
+              </S.CertificateWrapper>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </S.WrapperData>
     </S.Wrapper>

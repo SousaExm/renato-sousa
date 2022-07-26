@@ -6,7 +6,15 @@ import { SkilIcons } from "../SkilIcons"
 import * as S from './styled'
 import { useState, useEffect } from "react"
 
-export function SkilsList () {
+interface SkilsListProps{
+  skils?: {
+    name: string
+  }[]
+}
+
+export function SkilsList ({skils}:SkilsListProps) {
+
+ 
 
   const [ windowWidth, setWindowWidth ] = useState(0)
   useEffect(() => {
@@ -19,10 +27,7 @@ export function SkilsList () {
   })
   
   
-  const userSkils = [
-    "html5", "css3", "javascript", "typescript", "react", "nodejs", 
-    "git", "github", "graphql" 
-  ]
+  const userSkils = skils?.map(skil => skil.name)
 
   const setings:SwiperProps = {
     slidesPerView: windowWidth > 1200 ? 4 : windowWidth > 880 ? 3 : 1 ,
@@ -41,7 +46,7 @@ export function SkilsList () {
       <Slider
       setings={setings}
       >
-        {userSkils.map((skil , index) => (
+        {userSkils?.map((skil , index) => (
             (SkilIcons[skil] !== undefined ? (
               <SwiperSlide key={index + skil}>
                 {SkilIcons[skil]}

@@ -1,14 +1,25 @@
 import * as S from './styled'
+import Link from 'next/link';
 
-export function ProjectsCard() {
+interface ProjectProps {
+  title:string;
+  description:string;
+  slug: string;
+  imageUrl: string;
+}
+
+export function ProjectsCard({title, description, slug, imageUrl}:ProjectProps) {
   return(
     <S.Wrapper>
-      <S.ImgWrapper src='/pokenext.png'/> 
-      <S.Title>Pokenext</S.Title> 
+      <S.ImgWrapper src={imageUrl}/> 
+      <S.Title>{title}</S.Title> 
       <S.Description>
-        Lorem ipsum dolor sit amet consectetur adipisicing el... 
-      </S.Description>  
-      <S.Button>Ver mais...</S.Button>
+        {description.slice(0,70)}... 
+      </S.Description>
+      <Link href={`/project/${slug}`}>
+        <S.Button>Ver mais...</S.Button>
+      </Link>
+      
     </S.Wrapper>
   )
 }

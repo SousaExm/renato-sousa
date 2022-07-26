@@ -1,18 +1,20 @@
 import * as S from "./style"
+import  Link  from 'next/link'
 import { Linkedin } from "@styled-icons/evaicons-solid/Linkedin"
 import { Github } from "@styled-icons/bootstrap/Github"
 import { Instagram } from "@styled-icons/bootstrap/Instagram"
 import { Whatsapp } from "@styled-icons/bootstrap/Whatsapp"
 import { Menu } from '@styled-icons/boxicons-regular/Menu'
-import { Close } from "@styled-icons/ionicons-outline/Close"
 
 import { useState } from "react"
+import { ContactIcons } from "../ContactIcons"
 
 interface HeaderPropsType {
   local: "home" | "projects"
+  homeUrl?: string;
 }
 
-export function Header({local}:HeaderPropsType){
+export function Header({local, homeUrl}:HeaderPropsType){
     
   const [ menuStatus , setMenuStatus ] = useState<string>("")  
   
@@ -49,10 +51,13 @@ export function Header({local}:HeaderPropsType){
           </S.NavWrapper>
          </>
       ) : (
-        <S.NavLink className="for-page-projects">Voltar</S.NavLink>
+        <Link href={homeUrl? "/" + homeUrl : "#"}>
+          <S.NavLink className="for-page-projects">Voltar</S.NavLink>
+        </Link>
       )}
     
       <S.IconsWrapper>
+        <ContactIcons/>
         <S.WrapperLinkedin>
           <Linkedin/>
         </S.WrapperLinkedin>

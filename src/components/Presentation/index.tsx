@@ -1,14 +1,20 @@
 import Image from 'next/image'
 import * as S from './style'
 
-export function Presentation() {
+interface PresentationProps{
+  description?: string;
+  avatarURL?: string;
+  name?: string
+}
+
+export function Presentation({name, description, avatarURL}:PresentationProps) {
   return(
     <S.Wrapper id="home">
       <S.WrapperPresentation>
-        <S.Avatar src="https://avatars.githubusercontent.com/u/94645489?v=4" />
+        <S.Avatar src={avatarURL} alt={name}/>
         <div>
           <S.Title>Olá...</S.Title>
-          <S.Text> Seja muito bem vindo(a)! Meu nome é Renato Sousa e atualmente sou desenvolvedor fron-end Jr. Aqui nesse espaço voce terá a possibilidade de me conhecer um pouco melhor, sinta-se à vontade.</S.Text>
+          <S.Text>{description}</S.Text>
         </div>
       </S.WrapperPresentation>
     </S.Wrapper>

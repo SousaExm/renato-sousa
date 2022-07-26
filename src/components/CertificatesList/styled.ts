@@ -40,6 +40,7 @@ export const Wrapper = styled.div`
   }
 `
 
+
 export const Title = styled.h2`
   font-weight: bold;
   text-transform: uppercase;
@@ -93,4 +94,17 @@ export const ImageWrapper = styled.img`
   @media (max-width: 380px){
     height: 200px;
   }
+`
+
+export const CertificateWrapper =  styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const CertificateTitle =  styled.p`
+  text-align: center; 
+  color: #fff;
+  margin-top:16px;
 `

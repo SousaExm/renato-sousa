@@ -4,10 +4,9 @@ import { ResetCSS } from '../../global/ResetCSS'
 function MyApp({ Component, pageProps }: AppProps) {
   return(
     <>
-      <ResetCSS/>
-      <Component {...pageProps} />
+        <ResetCSS/>
+        <Component {...pageProps} />  
     </>
-    
   ) 
 }
 
