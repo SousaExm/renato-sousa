@@ -64,12 +64,12 @@ export function ProjectById({project}:ProjectProps){
       </S.TecnologiesWrapper>
       <S.ButtonsWrapper>
         {project.publicUrl && (
-          <a href={project.publicUrl} target="_blank">
+          <a href={project.publicUrl} target="_blank"  rel="noreferrer">
             <S.Button>Visitar o site</S.Button>
           </a>
         )}
         {project.repositoryUrl && (
-          <a href={project.repositoryUrl} target={"_blank"}>
+          <a href={project.repositoryUrl} target="_blank"  rel="noreferrer">
             <S.Button>Ver o código</S.Button>
           </a>
         )}
