@@ -8,7 +8,7 @@ import { ProjectsList } from "../components/ProjectList";
 import { CertificatesList } from "../components/CertificatesList";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { Contatc } from "../components/Contatc";
+import { Form } from "../components/Form";
 
 interface getAllUsersRes {
   data : {
@@ -50,6 +50,10 @@ interface UserInfoProps {
         url: string;
       }
     }[];
+    contacts: {
+      url: string
+      title: string
+    }[]
   }
 }
 
@@ -57,7 +61,7 @@ export default function Portfolio ({userInfo}:UserInfoProps){
   console.log(userInfo)
   return (
     <>
-      <Header local="home"/>
+      <Header contacts={userInfo.contacts} local="home"/>
       <Presentation
       name={userInfo.name}
       avatarURL={userInfo.avatar?.url}
@@ -71,7 +75,7 @@ export default function Portfolio ({userInfo}:UserInfoProps){
       <ProjectsList
       projects={userInfo.projects}
       />
-      <Contatc/>
+      <Form/>
       <Footer/>
     </>
   )
@@ -139,6 +143,10 @@ export const getStaticProps:GetStaticProps = async(context) => {
           certficateImage {
             url
           }
+        }
+        contacts {
+          url
+          title
         }
       }
     }

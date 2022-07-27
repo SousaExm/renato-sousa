@@ -88,57 +88,6 @@ export const NavLink = styled.a`
   }
 `
 
-export const IconsWrapper = styled.div`
-  display: flex;
-  gap: 8px;
-  margin-right: 12px;
-
-  @media ( max-width: 1100px){
-    margin-right: 0;
-  }
-`
-
-export const WrapperGithub = styled.div`
-  background-color: #161B22;
-  width: 32px; 
-  height: 32px;
-  padding: 4px;
-  border-radius: 8px;
-  
-  ${StyledIconBase}{
-    color: #fff;
-    width: 24px;
-    height: 24px;
-  }
-`
-export const WrapperIntagram = styled.div`
-  background: linear-gradient(36deg, rgba(249,217,0,1) 0%, rgba(247,1,3,1) 50%, rgba(125,56,178,1) 100%);
-  width: 32px; 
-  height: 32px;
-  padding: 4px;
-  border-radius: 8px;
-  
-  ${StyledIconBase}{
-    color: #fff;
-    width: 24px;
-    height: 24px;
-  }
-`
-export const WrapperWhats = styled.div`
-
-  background: linear-gradient(0deg, rgba(105,213,78,1) 0%, rgba(15,142,8,1) 56%, rgba(105,213,78,1) 100%);
-  width: 32px; 
-  height: 32px;
-  padding: 4px;
-  border-radius: 8px;
-  
-  ${StyledIconBase}{
-    color: #fff;
-    width: 24px;
-    height: 24px;
-  }
-`
-
 export const OpenAndCloseMenu = styled.div`
   display: none;
   border-bottom: 3px solid red;

@@ -8,7 +8,7 @@ interface ContatctIconProps {
   iconName: "linkedin" | "instagram" | "whatsApp" | "github" ;
 }
 
-export function ContactIcons({iconName, children, url}:ContatctIconProps) {
+export function Icon({iconName, children, url}:ContatctIconProps) {
   
   const [ isVisible, setIsVisible ] = useState<"visible" | "">("")
   const canvasRef = useRef<HTMLCanvasElement>(null)

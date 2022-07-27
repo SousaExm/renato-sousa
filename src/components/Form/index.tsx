@@ -1,7 +1,7 @@
 import { Send } from 'styled-icons/boxicons-solid'
 import * as S from './styled'
 
-export function Contatc (){
+export function Form (){
   return (
     <S.Wrapper id="contact">
       <S.FormWrapper>
