@@ -36,7 +36,7 @@ export function Contact({contacts}:ContactsProps) {
     <S.IconsWrapper>
       {contacts.map(contact => (
         <Icon 
-        key={contatc.url + contact.title}
+        key={contact.url + contact.title}
         iconName={contact.title}
         url={contact.url}
         >
