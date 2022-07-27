@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {StyledIconBase} from '@styled-icons/styled-icon'
 
 interface IconWrapperTypes {
-  iconName: "linkedin" | "instagram" | "whatsApp" | "github" 
+  iconName: string; 
 }
 
 function selectColorTheme(name:string) {
