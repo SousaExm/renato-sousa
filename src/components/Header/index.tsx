@@ -12,6 +12,7 @@ import { ContactIcons } from "../ContactIcons"
 interface HeaderPropsType {
   local: "home" | "projects"
   homeUrl?: string;
+  contacts?: undefined; 
 }
 
 export function Header({local, homeUrl}:HeaderPropsType){
@@ -57,19 +58,30 @@ export function Header({local, homeUrl}:HeaderPropsType){
       )}
     
       <S.IconsWrapper>
-        <ContactIcons/>
-        <S.WrapperLinkedin>
+        <ContactIcons
+        url='google.com'
+        iconName="linkedin"   
+        >
           <Linkedin/>
-        </S.WrapperLinkedin>
-        <S.WrapperGithub>
+        </ContactIcons>
+        <ContactIcons
+        url='google.com'
+        iconName="github"   
+        >
           <Github/>
-        </S.WrapperGithub>
-        <S.WrapperIntagram>
+        </ContactIcons>
+        <ContactIcons
+        url='google.com'
+        iconName="instagram"   
+        >
           <Instagram/>
-        </S.WrapperIntagram>
-        <S.WrapperWhats>
+        </ContactIcons>
+        <ContactIcons
+        url='google.com'
+        iconName="whatsApp"   
+        >
           <Whatsapp/>
-        </S.WrapperWhats>
+        </ContactIcons>
       </S.IconsWrapper>
     </S.Wrapper>
   )

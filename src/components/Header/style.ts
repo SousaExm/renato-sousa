@@ -98,21 +98,6 @@ export const IconsWrapper = styled.div`
   }
 `
 
-export const WrapperLinkedin = styled.a`
-  background-color: #2868B2;
-  width: 32px; 
-  height: 32px;
-  padding: 4px;
-  border-radius: 8px;
-  
-  ${StyledIconBase}{
-    color: #fff;
-    background-color: #2868B2;
-    border-radius: none;
-    width: 24px;
-    height: 24px;
-  }
-`
 export const WrapperGithub = styled.div`
   background-color: #161B22;
   width: 32px; 
@@ -127,7 +112,6 @@ export const WrapperGithub = styled.div`
   }
 `
 export const WrapperIntagram = styled.div`
-  background: rgb(249,217,0);
   background: linear-gradient(36deg, rgba(249,217,0,1) 0%, rgba(247,1,3,1) 50%, rgba(125,56,178,1) 100%);
   width: 32px; 
   height: 32px;
@@ -141,7 +125,7 @@ export const WrapperIntagram = styled.div`
   }
 `
 export const WrapperWhats = styled.div`
-  background: rgb(105,213,78);
+
   background: linear-gradient(0deg, rgba(105,213,78,1) 0%, rgba(15,142,8,1) 56%, rgba(105,213,78,1) 100%);
   width: 32px; 
   height: 32px;
