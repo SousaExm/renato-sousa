@@ -9,7 +9,7 @@ interface ContactsProps{
   contacts: {
     url: string;
     title: string;
-  }[] 
+  }[] | undefined;
 }
 
 
