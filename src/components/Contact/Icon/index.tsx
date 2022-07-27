@@ -5,7 +5,7 @@ import QRCode from 'qrcode'
 interface ContatctIconProps {
   children: ReactNode;
   url: string;
-  iconName: "linkedin" | "instagram" | "whatsApp" | "github" ;
+  iconName: string;
 }
 
 export function Icon({iconName, children, url}:ContatctIconProps) {
