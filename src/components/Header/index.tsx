@@ -8,7 +8,7 @@ import { Contact } from "../Contact"
 interface HeaderPropsType {
   local: "home" | "projects";
   homeUrl?: string;
-  contacts: {
+  contacts?: {
     url: string;
     title: string;
   }[] 
