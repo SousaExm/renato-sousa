@@ -32,7 +32,6 @@ export function CertificatesList ({ certificates } : CertificateProps){
 
   return (
     <S.Wrapper>
-      <S.WrapperData>
         <S.Title>
           Certificados
         </S.Title>
@@ -49,7 +48,6 @@ export function CertificatesList ({ certificates } : CertificateProps){
             </SwiperSlide>
           ))}
         </Swiper>
-      </S.WrapperData>
     </S.Wrapper>
   )
 }

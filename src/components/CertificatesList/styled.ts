@@ -6,13 +6,15 @@ export const Wrapper = styled.div`
   color: #fff;
   background-color: black;
 
+  padding: 60px 0;
+
   box-shadow: inset 0px 15px 23px -20px rgba(255,0,13,.5), inset 0px -15px 23px -20px rgba(255,0,13,.5);
 
 
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex-direction: column;
   
   .swiper {
     width: 100%;
@@ -69,7 +71,7 @@ export const WrapperData = styled.div`
   
   background-color: rgba(0,0,0,.85);
 
-  padding: 60px 0;
+  padding: 60px 10%;
 
   flex-direction: column;
 `
@@ -77,12 +79,9 @@ export const WrapperData = styled.div`
 export const ImageWrapper = styled.img`
   border-radius: 8px;
   box-shadow: 0px 20px 30px 3px rgba(56,53,56,.2);
-  width: 438px;
-  height: 309px;
 
-  margin: 0 16px;
+  height: 260px;
 
-  transition: .4s;
   border-radius: 8px;
 
   box-shadow: 0px 20px 30px 3px rgba(0,0,0,.3);
@@ -107,4 +106,5 @@ export const CertificateTitle =  styled.p`
   text-align: center; 
   color: #fff;
   margin-top:16px;
+  max-width: 280px;
 `
