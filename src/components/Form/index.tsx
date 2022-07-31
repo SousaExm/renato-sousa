@@ -1,7 +1,26 @@
-import { Send } from 'styled-icons/boxicons-solid'
+import { gql, useQuery } from '@apollo/client'
+import { FormEvent, useEffect } from 'react'
 import * as S from './styled'
 
+const TESTE = gql`
+    {
+      usersInfo {
+        slug
+      }
+    }
+  `
+
 export function Form (){
+
+  
+  useEffect(() => {
+    const { loading, error, data} = useQuery(TESTE)
+    loading && console.log(loading)
+    error && console.log(error)
+    data && console.log(data)
+  },[])
+
+
   return (
     <S.Wrapper id="contact">
       <S.FormWrapper>
@@ -32,7 +51,8 @@ export function Form (){
           <label htmlFor="">mensagem</label>
           <textarea placeholder='Digite aqui...'/>
         </S.MensageWrapper>
-        <button>Enviar</button>
+        <button
+        >Enviar</button>
       </S.FormWrapper>
     </S.Wrapper>
   )

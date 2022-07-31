@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { gql } from '@apollo/client'
-import { client } from "../lib/apollo";
 import React from "react";
 import { Presentation } from "../components/Presentation";
 import { SkilsList } from "../components/SkilsList";
@@ -9,6 +8,7 @@ import { CertificatesList } from "../components/CertificatesList";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Form } from "../components/Form";
+import { client } from "../../lib/apolloClient";
 
 interface getAllUsersRes {
   data : {
@@ -58,7 +58,7 @@ interface UserInfoProps {
 }
 
 export default function Portfolio ({userInfo}:UserInfoProps){  
-  console.log(userInfo)
+  
   return (
     <>
       <Header contacts={userInfo.contacts} local="home"/>
@@ -82,7 +82,7 @@ export default function Portfolio ({userInfo}:UserInfoProps){
 }
 
 export const getStaticPaths: GetStaticPaths = async() => {
-  const { data }:getAllUsersRes = await client.query({
+  const  { data }: getAllUsersRes = await client.query({
     query: gql`
     query {
       usersInfo {
@@ -92,7 +92,9 @@ export const getStaticPaths: GetStaticPaths = async() => {
   `
   })
 
-  const paths = data.usersInfo.map( user => {
+
+  
+  const paths = data?.usersInfo.map( user => {
     return {
       params: {
         username: user.slug
@@ -107,7 +109,6 @@ export const getStaticPaths: GetStaticPaths = async() => {
 }
 
 export const getStaticProps:GetStaticProps = async(context) => {
-
   const slug = context.params?.username
   const { data } = await client.query({
     query: gql`
@@ -154,7 +155,9 @@ export const getStaticProps:GetStaticProps = async(context) => {
     variables:{slug} 
   })
   
-  return {
-    props: data
-  }
+  return (
+    {
+      props: data
+    }
+  )
 } 

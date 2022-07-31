@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { gql } from '@apollo/client'
-import { client } from "../../lib/apollo";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { ProjectById } from "../../components/ProjectById";
+import { client } from "../../../lib/apolloClient";
 
 interface getAllProjectsRes {
   data : {

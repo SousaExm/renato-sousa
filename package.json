@@ -10,11 +10,18 @@
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
+    "@apollo/link-error": "^2.0.0-beta.3",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@graphql-codegen/fragment-matcher": "^3.3.0",
     "@vime/core": "^5.3.1",
+    "apollo-link-error": "^1.1.13",
+    "apollo-upload-client": "^17.0.0",
+    "deepmerge": "^4.2.2",
     "framer-motion": "^6.4.2",
     "graphql": "^16.5.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "lodash": "^4.17.20",
     "next": "12.2.0",
     "qrcode": "^1.5.1",
     "react": "18.2.0",
@@ -24,6 +31,8 @@
     "swiper": "^8.3.0"
   },
   "devDependencies": {
+    "@types/apollo-upload-client": "^17.0.1",
+    "@types/lodash": "^4.14.182",
     "@types/node": "18.0.3",
     "@types/qrcode": "^1.4.2",
     "@types/react": "18.0.15",
